@@ -3,20 +3,29 @@
     <div class="header__inner">
       <?=$this->component('logo')?>
 
-      <?php if (isUser()): ?>
-        User
-      <?php endif; ?>
-
-      <ul>
+      <ul class="header__nav-list">
         <li>
           <a href="/lessons">Все уроки</a>
         </li>
+        <?php if (isUser()): ?>
+          <li>
+            <a href="/likes">Избранное</a>
+          </li>
+        <?php endif; ?>
       </ul>
-
-      <?=$this->component('button', [
-        'href' => '/user/login',
-        'title' => 'Войти'
-      ])?>
+      <?php if (isUser()): ?>
+        <?=$this->component('button', [
+          'href' => '/profile',
+          'title' => 'Профиль',
+          'type' => 'outlined'
+        ])?>
+      <?php endif; ?>
+      <?php if (!isUser()): ?>
+        <?=$this->component('button', [
+          'href' => '/user/login',
+          'title' => 'Войти'
+        ])?>
+      <?php endif; ?>
     </div>
   </div>
 </div>

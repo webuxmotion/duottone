@@ -1,0 +1,42 @@
+.profile {
+  color: white;
+
+  &__section {
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__avatar-group {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-size: contain;
+    background-position: center;
+    margin-right: 20px;
+  }
+
+  &__input-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__input-columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__input-column {
+    max-width: 350px;
+    padding-right: 150px;
+  }
+}

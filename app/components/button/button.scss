@@ -8,6 +8,7 @@
   cursor: pointer;
   font-size: 20px;
   border: none;
+  display: inline-block;
 
   &:hover {
     background-color: lighten($primary-color, 10%);
@@ -15,5 +16,19 @@
 
   &:active {
     background-color: $primary-color;
+  }
+
+  &--type {
+
+    &--outlined {
+      background-color: transparent;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+
+      &:hover {
+        background-color: transparent;
+        color: white;
+      }
+    }
   }
 }

@@ -2,6 +2,8 @@
 -- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
+-- Host: duottone-mysql-app:3306
+-- Generation Time: Oct 02, 2021 at 05:08 PM
 -- Server version: 5.7.35
 -- PHP Version: 7.2.2
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `duottone_db`
+-- Database: `starter_kit_db`
 --
 
 -- --------------------------------------------------------
@@ -32,8 +34,11 @@ CREATE TABLE `user` (
   `password` varchar(256) NOT NULL,
   `firstName` varchar(256) DEFAULT NULL,
   `lastName` varchar(256) DEFAULT NULL,
+  `phone` varchar(256) DEFAULT NULL,
   `avatar` varchar(256) DEFAULT NULL,
   `address` varchar(256) DEFAULT NULL,
+  `facebook` varchar(256) DEFAULT NULL,
+  `telegram` varchar(256) DEFAULT NULL,
   `role` enum('admin','user') NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -56,7 +61,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

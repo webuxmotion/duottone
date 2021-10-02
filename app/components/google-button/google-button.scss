@@ -1,3 +1,26 @@
-.login {
-  color: white;
+.google-button {
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+  border-radius: 22px;
+  color: #757575;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+
+  &:hover {
+    color: black;
+  }
+
+  &__icon {
+    display: inline-block;
+
+    svg {
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
 }

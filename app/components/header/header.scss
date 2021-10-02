@@ -7,11 +7,27 @@
     justify-content: space-between;
   }
 
-  &__logo {
+  &__nav-list {
+    list-style: none;
     display: flex;
-    align-items: center;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 22px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 50px;
+
+    li {
+      padding: 0 30px;
+    }
+
+    a {
+      @include hoverEffect;
+
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
