@@ -1,9 +1,15 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
-
 @import "./scss/variables.scss";
 @import "./scss/reset.scss";
 @import "./scss/mixins.scss";
 
+@import "../layouts/default.scss";
+
+@import "../components/not-found/not-found.scss";
+@import "../components/login/login.scss";
+@import "../components/google-button/google-button.scss";
+@import "../components/footer/footer.scss";
+@import "../components/container/container.scss";
+@import "../components/section/section.scss";
 @import "../components/logo/logo.scss";
 @import "../components/button/button.scss";
 @import "../components/hero/hero.scss";

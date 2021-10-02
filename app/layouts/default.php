@@ -9,9 +9,18 @@
   <link href="/dist/styles.css" rel="stylesheet">
 </head>
 <body>
-  <?=$this->component('header')?>
-  <?=$content?>
-  <?=$this->component('footer')?>
+  <div class="default-layout">
+    <div class="default-layout__header">
+      <?=$this->component('header')?>
+    </div>
+    <div class="default-layout__body">
+      <?=$content?>
+    </div>
+    <div class="default-layout__footer">
+      <?=$this->component('footer')?>
+    </div>
+  </div>
+  
   <script>
     var serverUrl = "<?=siteUrl()?>";
   </script>

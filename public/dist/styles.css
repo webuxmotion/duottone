@@ -1,7 +1,12 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+html {
+  height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  background-color: #191919;
+  height: 100%;
 }
 
 h1,
@@ -14,6 +19,10 @@ p {
   margin: 0;
 }
 
+p {
+  font-size: 22px;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -21,6 +30,73 @@ ul {
 
 .debug {
   color: #969692;
+}
+
+a {
+  color: #3C88DE;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.default-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.default-layout__body {
+  flex-grow: 1;
+}
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.not-found__number {
+  font-size: 150px;
+  font-weight: bold;
+  color: #f5f8fb;
+  line-height: 130px;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+  margin-bottom: 20px;
+}
+.not-found__message {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.login {
+  color: white;
+  text-align: center;
+}
+
+.login {
+  color: white;
+}
+
+.footer {
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .logo {
@@ -41,7 +117,7 @@ ul {
 
 .button {
   transition: 0.3s;
-  background-color: #147af2;
+  background-color: #3C88DE;
   text-decoration: none;
   color: white;
   padding: 20px;
@@ -53,12 +129,20 @@ ul {
   transform: translateY(-1px);
 }
 .button:hover {
-  background-color: #4495f5;
+  background-color: #68a3e5;
 }
 .button:active {
-  background-color: #147af2;
+  background-color: #3C88DE;
 }
 
+.header {
+  padding-top: 25px;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .header__logo {
   display: flex;
   align-items: center;

@@ -1,0 +1,1 @@
+<a href="<?=$href?>">Continue with Google</a>
