@@ -30,4 +30,19 @@
       }
     }
   }
+
+  &__logo {
+    position: relative;
+  }
+
+  &__logo-appendix {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    svg {
+      width: 120px;
+      display: block;
+    }
+  }
 }

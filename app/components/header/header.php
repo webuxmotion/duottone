@@ -1,8 +1,18 @@
+<?php
+  $isIndexPage = $isIndexPage ?? null;
+?>
+
 <div class="header section">
   <div class="container">
     <div class="header__inner">
-      <?=$this->component('logo')?>
-
+      <div class="header__logo">
+        <?=$this->component('logo')?>
+        <?php if ($isIndexPage): ?>
+          <div class="header__logo-appendix">
+            <?=icon('logo-appendix')?>
+          </div>
+        <?php endif; ?>
+      </div>
       <ul class="header__nav-list">
         <li>
           <a href="/lessons">Все уроки</a>

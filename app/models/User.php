@@ -95,4 +95,53 @@ class User extends Model {
             $this->setSessionUser($res[0]);
         }
     }
+
+    public function updateProfile($data) {
+        $user = $_SESSION['user'] ?? null;
+
+        if ($user) {
+            $email = $user['email'];
+        }
+        
+        $res = $this->findOne($email, 'email');
+        
+        if (!empty($res) && !empty($data)) {
+            $firstName = $data['firstName'];
+            $lastName = $data['lastName'];
+            $phone = $data['phone'];
+            $facebook = $data['facebook'];
+            $telegram = $data['telegram'];
+
+            $sql = "
+                UPDATE user
+                SET 
+                    firstName = ?,
+                    lastName = ?,
+                    phone = ?,
+                    facebook = ?,
+                    telegram = ?
+                WHERE 
+                    email = ?
+            ";
+
+            $this->db->execute($sql, [
+                $firstName, 
+                $lastName,
+                $phone,
+                $facebook,
+                $telegram,
+                $email
+            ]);
+
+            $res = $this->findOne($email, 'email');
+
+            if (!empty($res)) {
+                $this->setSessionUser($res[0]);
+
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

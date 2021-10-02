@@ -17,6 +17,7 @@
         value="<?=$value?>"
         id="<?=$id?>"
         type="<?=$type?>"
+        name="<?=$name?>"
         class="input__input"
         <?=$disabled === true ? "disabled": '' ?>
         

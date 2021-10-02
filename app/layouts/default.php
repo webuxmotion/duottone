@@ -11,7 +11,10 @@
 <body>
   <div class="default-layout">
     <div class="default-layout__header">
-      <?=$this->component('header')?>
+      <?=$this->component('header', [
+        'isIndexPage' => !$this->route['url']
+      ])?>
+      <?=$this->component('message')?>
     </div>
     <div class="default-layout__body">
       <?=$content?>

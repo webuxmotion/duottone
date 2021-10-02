@@ -58,9 +58,9 @@ a:hover {
   flex-grow: 1;
 }
 .profile-page {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .profile-page__header {
   padding-top: 100px;
@@ -86,23 +86,33 @@ a:hover {
 }
 
 .not-found {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+}
+.not-found__body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 .not-found__number {
-  font-size: 150px;
-  font-weight: bold;
-  color: #f5f8fb;
+  font-size: 130px;
   line-height: 130px;
-  text-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
   margin-bottom: 20px;
 }
 .not-found__message {
   margin-bottom: 40px;
-  font-size: 40px;
+  font-size: 30px;
+}
+.not-found__info {
+  font-size: 30px;
+}
+.not-found__info.is-first {
+  margin-top: 100px;
+}
+.not-found__info.is-second {
+  margin-top: 40px;
+  text-align: center;
 }
 
 .login {
@@ -119,6 +129,27 @@ a:hover {
   max-width: 700px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.message {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.message__body {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.message__icon {
+  margin-bottom: 10px;
+}
+.message__icon svg {
+  width: 60px;
 }
 
 .profile {
@@ -153,8 +184,8 @@ a:hover {
   flex-wrap: wrap;
 }
 .profile__input-column {
-  max-width: 350px;
-  padding-right: 150px;
+  width: 500px;
+  padding-right: 100px;
 }
 
 .input {
@@ -171,11 +202,11 @@ a:hover {
 .input__input {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  height: 60px;
+  height: 54px;
   padding-left: 20px;
   padding-right: 20px;
   color: white;
-  font-size: 30px;
+  font-size: 26px;
   box-sizing: border-box;
 }
 .input__input:focus {
@@ -278,6 +309,30 @@ a:hover {
   color: white;
 }
 
+.hero {
+  color: white;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__title {
+  font-size: 80px;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+.hero__description {
+  font-size: 30px;
+  max-width: 740px;
+}
+.hero__button {
+  padding-top: 40px;
+}
+
 .header {
   padding-top: 25px;
 }
@@ -307,6 +362,18 @@ a:hover {
 }
 .header__nav-list a:hover {
   color: white;
+}
+.header__logo {
+  position: relative;
+}
+.header__logo-appendix {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__logo-appendix svg {
+  width: 120px;
+  display: block;
 }
 
 .centered-card {

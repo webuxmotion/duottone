@@ -1,21 +1,35 @@
 .not-found {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    color: white;
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   
     &__number {
-      font-size: 150px;
-      font-weight: bold;
-      color: #f5f8fb;
+      font-size: 130px;
       line-height: 130px;
-      text-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
       margin-bottom: 20px;
     }
   
     &__message {
       margin-bottom: 40px;
-      font-size: 40px;
+      font-size: 30px;
+    }
+
+    &__info {
+      font-size: 30px;
+
+      &.is-first {
+        margin-top: 100px;
+      }
+
+      &.is-second {
+        margin-top: 40px;
+        text-align: center;
+      }
     }
   }
