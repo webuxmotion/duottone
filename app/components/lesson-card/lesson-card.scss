@@ -1,0 +1,50 @@
+.lesson-card {
+    
+    &__box {
+        border: 1px solid $primary-color;
+        position: relative;
+        display: block;
+        background-size: 101%;
+        background-position: center;
+
+        &:hover {
+            border-color: white;
+        }
+    }
+
+    &__inner {
+        padding-bottom: 100%;
+    }
+
+    &__footer {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    &__statistics {
+        text-decoration: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        display: flex;
+    }
+
+    &__statistics-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    &__statistics-icon {
+        margin-bottom: 5px;
+        height: 30px;
+
+        &.is-active {
+            path {
+                fill: $primary-color;
+            }
+        }
+    }
+}

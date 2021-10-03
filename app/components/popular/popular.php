@@ -8,7 +8,9 @@
         <?php if ($items): ?>
           <?php foreach ($items as $item): ?>
             <div class="popular__list-item">
-              <?=debug($item)?>
+              <?=$this->component('lesson-card', [
+                'item' => $item
+              ])?>
             </div>
           <?php endforeach; ?>
         <?php endif; ?>

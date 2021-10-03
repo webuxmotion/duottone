@@ -131,6 +131,64 @@ a:hover {
   margin-left: auto;
 }
 
+.faq {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.faq__title {
+  margin-bottom: 10px;
+}
+.faq__section {
+  padding-top: 30px;
+}
+.faq__section-title {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+.faq__section-text {
+  max-width: 800px;
+}
+
+.lesson-card__box {
+  border: 1px solid #3C88DE;
+  position: relative;
+  display: block;
+  background-size: 101%;
+  background-position: center;
+}
+.lesson-card__box:hover {
+  border-color: white;
+}
+.lesson-card__inner {
+  padding-bottom: 100%;
+}
+.lesson-card__footer {
+  padding-top: 10px;
+  font-size: 20px;
+}
+.lesson-card__statistics {
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  display: flex;
+}
+.lesson-card__statistics-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+.lesson-card__statistics-icon {
+  margin-bottom: 5px;
+  height: 30px;
+}
+.lesson-card__statistics-icon.is-active path {
+  fill: #3C88DE;
+}
+
 .popular {
   background-color: #202020;
   padding-top: 100px;
@@ -140,12 +198,23 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 50px;
 }
 .popular__title {
   color: white;
 }
 .popular__link {
   font-size: 20px;
+}
+.popular__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popular__list-item {
+  padding-right: 50px;
+  padding-bottom: 50px;
+  width: 300px;
+  max-width: 100%;
 }
 
 .message {
