@@ -21,7 +21,9 @@ class LessonsController extends AppController {
         $alias = $this->route['alias'];
         $lesson_model = new Lesson();
         $item = $lesson_model->selectByAlias($alias);
-        $lesson_model->setViews($item['id'], $item['views'] + 1);
+        if ($item) {
+            $lesson_model->setViews($item['id'], $item['views'] + 1);
+        }
 
         $content = null;
         
