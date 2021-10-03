@@ -29,6 +29,11 @@
         background-color: transparent;
         color: white;
       }
+
+      &.is-active {
+        border-color: white;
+        color: white;
+      }
     }
   }
 }

@@ -85,6 +85,40 @@ a:hover {
   text-align: center;
 }
 
+.lessons-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.lessons-page__header {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: white;
+}
+.lessons-page__content {
+  background-color: #202020;
+  flex-grow: 1;
+  padding-top: 80px;
+  padding-bottom: 180px;
+}
+
+.likes-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.likes-page__header {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: white;
+}
+.likes-page__content {
+  background-color: #202020;
+  flex-grow: 1;
+  padding-top: 80px;
+  padding-bottom: 180px;
+}
+
 .not-found {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -150,6 +184,17 @@ a:hover {
   max-width: 800px;
 }
 
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards__list-item {
+  padding-right: 50px;
+  padding-bottom: 50px;
+  width: 300px;
+  max-width: 100%;
+}
+
 .lesson-card__box {
   border: 1px solid #3C88DE;
   position: relative;
@@ -205,16 +250,6 @@ a:hover {
 }
 .popular__link {
   font-size: 20px;
-}
-.popular__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.popular__list-item {
-  padding-right: 50px;
-  padding-bottom: 50px;
-  width: 300px;
-  max-width: 100%;
 }
 
 .message {
@@ -394,6 +429,10 @@ a:hover {
   background-color: transparent;
   color: white;
 }
+.button--type--outlined.is-active {
+  border-color: white;
+  color: white;
+}
 
 .hero {
   color: white;
@@ -438,16 +477,42 @@ a:hover {
 .header__nav-list li {
   padding: 0 30px;
 }
-.header__nav-list a {
-  transition: 0.3s;
-  text-decoration: none;
-  display: inline-block;
+.header__nav-item {
+  display: flex;
+  align-items: center;
 }
-.header__nav-list a:hover {
+.header__nav-item.is-active a {
+  color: white;
+}
+.header__nav-item.is-active svg path {
+  fill: white;
+}
+.header__nav-item svg {
+  display: block;
+  margin-right: 10px;
+  width: 20px;
+}
+.header__nav-item svg path {
+  transition: 0.3s;
+  fill: #3C88DE;
+}
+.header__nav-item svg path:hover {
   transform: translateY(-1px);
 }
-.header__nav-list a:hover {
+.header__nav-item a {
+  transition: 0.3s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header__nav-item a:hover {
+  transform: translateY(-1px);
+}
+.header__nav-item a:hover {
   color: white;
+}
+.header__nav-item a:hover svg path {
+  fill: white;
 }
 .header__logo {
   position: relative;

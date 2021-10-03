@@ -18,15 +18,48 @@
     li {
       padding: 0 30px;
     }
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+
+    &.is-active {
+
+      a {
+        color: white;
+      }
+
+      svg path {
+        fill: white;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-right: 10px;
+      width: 20px;
+
+      path {
+        @include hoverEffect;
+        
+        fill: $primary-color;
+      }
+    }
 
     a {
       @include hoverEffect;
 
       text-decoration: none;
-      display: inline-block;
+      display: flex;
+      align-items: center;
 
       &:hover {
         color: white;
+
+        svg path {
+          fill: white;
+        }
       }
     }
   }

@@ -12,7 +12,8 @@
   <div class="default-layout">
     <div class="default-layout__header">
       <?=$this->component('header', [
-        'isIndexPage' => !$this->route['url']
+        'isIndexPage' => !$this->route['url'],
+        'alias' => $this->route['url']
       ])?>
       <?=$this->component('message')?>
     </div>

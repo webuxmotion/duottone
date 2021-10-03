@@ -14,12 +14,12 @@
         <?php endif; ?>
       </div>
       <ul class="header__nav-list">
-        <li>
+        <li class="header__nav-item <?=$alias === 'lessons' ? 'is-active' : ''?>">
           <a href="/lessons">Все уроки</a>
         </li>
         <?php if (isUser()): ?>
-          <li>
-            <a href="/likes">Избранное</a>
+          <li class="header__nav-item <?=$alias === 'likes' ? 'is-active' : ''?>">
+            <a href="/likes"><span><?=icon('heart')?></span>Избранное</a>
           </li>
         <?php endif; ?>
       </ul>
@@ -27,7 +27,8 @@
         <?=$this->component('button', [
           'href' => '/profile',
           'title' => 'Профиль',
-          'type' => 'outlined'
+          'type' => 'outlined',
+          'active' => $alias === 'profile'
         ])?>
       <?php endif; ?>
       <?php if (!isUser()): ?>

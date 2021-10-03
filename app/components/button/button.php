@@ -3,6 +3,7 @@
   $href = $href ?? null;
   $target = $target ?? null;
   $type = $type ?? null;
+  $active = $active ?? null;
   $classes = '';
 
   $tag = $href ? 'a' : 'button';
@@ -11,6 +12,10 @@
 
   if ($type) {
     $classes .= "button--type--$type";
+  }
+
+  if ($active) {
+    $classes .= " is-active";
   }
 ?>
 

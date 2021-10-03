@@ -15,7 +15,7 @@
   \*****************************************/
 /***/ (() => {
 
-eval("document.addEventListener('DOMContentLoaded', () => {\n\n  // Get all \"navbar-burger\" elements\n  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);\n\n  // Check if there are any navbar burgers\n  if ($navbarBurgers.length > 0) {\n\n    // Add a click event on each of them\n    $navbarBurgers.forEach( el => {\n      el.addEventListener('click', () => {\n\n        // Get the target from the \"data-target\" attribute\n        const target = el.dataset.target;\n        const $target = document.getElementById(target);\n\n        // Toggle the \"is-active\" class on both the \"navbar-burger\" and the \"navbar-menu\"\n        el.classList.toggle('is-active');\n        $target.classList.toggle('is-active');\n\n      });\n    });\n  }\n\n});\n\n//# sourceURL=webpack://starter-kit/./app/components/header/header.js?");
+eval("\n\n//# sourceURL=webpack://starter-kit/./app/components/header/header.js?");
 
 /***/ }),
 

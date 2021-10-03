@@ -8,21 +8,59 @@ class Lesson extends Model {
 
     protected $table = 'lesson';
 
+    public function selectAll() {
+        $allItems = $this->fetchAll();
+
+        $likes = $this->getLikes($allItems);
+
+        $resItems = $this->mergeLikesIntoItems($allItems, $likes);
+        
+        return $resItems;
+    }
+
     public function selectPopular() {
         $popular = $this->fetchPopular();
 
         $likes = $this->getLikes($popular);
 
-        $resItems = [];
-
-        foreach ($popular as $item) {
-            $item['likes'] = $likes[$item['id']]['all'];
-            $item['likedByUser'] = $likes[$item['id']]['likedByUser'];
-
-            array_push($resItems, $item);
-        }
+        $resItems = $this->mergeLikesIntoItems($popular, $likes);
         
         return $resItems;
+    }
+
+    public function selectLikedByUser() {
+        $items = $this->fetchLikedByUser();
+
+        $likes = $this->getLikes($items, true);
+
+        $resItems = $this->mergeLikesIntoItems($items, $likes);
+        
+        return $resItems;
+    }
+
+    public function fetchLikedByUser() {
+        $userId = $_SESSION['user']['id'];
+        $sql = "
+            SELECT lessonId FROM heart
+            WHERE userId = ?
+        ";
+
+        $heartsRes = $this->db->query($sql, [$userId]);
+        $idsArr = [];
+
+        foreach ($heartsRes as $item) {
+            array_push($idsArr, $item['lessonId']);
+        }
+
+        $slots = $this->getSlotsFromArr($idsArr);
+
+        $sql = "
+            SELECT * FROM {$this->table}
+            WHERE id in ($slots)
+        ";
+        $items = $this->db->query($sql, $idsArr);
+
+        return $items;
     }
 
     public function fetchPopular() {
@@ -40,7 +78,18 @@ class Lesson extends Model {
         return $res;
     }
 
-    public function getLikes($items) {
+    public function fetchAll() {
+        $sql = "SELECT * FROM {$this->table}";
+        $res = $this->db->query($sql);
+
+        if (empty($res)) {
+            return false;
+        }
+
+        return $res;
+    }
+
+    public function getLikes($items, $allLikedByUser = false) {
         $resArr = [];
 
         foreach ($items as $item) {
@@ -51,9 +100,9 @@ class Lesson extends Model {
             
             $allLikes = $this->db->query($sql, [$item['id']]);
 
-            $isLikedByUser = false;
+            $isLikedByUser = $allLikedByUser;
 
-            if (isset($_SESSION['user'])) {
+            if (isset($_SESSION['user']) && !$isLikedByUser) {
                 $sql = "
                     SELECT * FROM heart
                     WHERE lessonId = ? AND userId = ?
@@ -73,5 +122,18 @@ class Lesson extends Model {
         }
         
         return $resArr;
+    }
+
+    private function mergeLikesIntoItems($items, $likes) {
+        $resItems = [];
+
+        foreach ($items as $item) {
+            $item['likes'] = $likes[$item['id']]['all'];
+            $item['likedByUser'] = $likes[$item['id']]['likedByUser'];
+
+            array_push($resItems, $item);
+        }
+        
+        return $resItems;
     }
 }

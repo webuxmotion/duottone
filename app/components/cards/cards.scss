@@ -1,0 +1,13 @@
+.cards {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    padding-right: 50px;
+    padding-bottom: 50px;
+    width: 300px;
+    max-width: 100%;
+  }
+}
