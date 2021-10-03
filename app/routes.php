@@ -9,3 +9,9 @@ Router::add(
     '^lessons/(?P<alias>[0-9a-z-]+)$', 
     ['controller' => 'Lessons', 'action' => 'view']
 );
+
+Router::add(
+    '^site-functionality$', 
+    ['controller' => 'Functionality', 'action' => 'index']
+);
+

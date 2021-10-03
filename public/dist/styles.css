@@ -126,6 +126,22 @@ a:hover {
 .lessons-view-page__back-button {
   margin-right: 50px;
 }
+.lessons-view-page__empty-content-text {
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+.lessons-view-page__scroll-bottom {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.lessons-view-page__scroll-bottom p {
+  max-width: 800px;
+  margin-left: 30px;
+}
 
 .likes-page {
   display: flex;
@@ -145,6 +161,23 @@ a:hover {
 }
 .likes-page__text {
   color: white;
+}
+
+.functionality-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.functionality-page__spacer {
+  padding-top: 50px;
+}
+.functionality-page__section {
+  background-color: #202020;
+  flex-grow: 1;
+}
+.functionality-page__body {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .not-found {
@@ -319,6 +352,19 @@ a:hover {
 }
 .message__icon svg {
   width: 60px;
+}
+
+.content {
+  color: white;
+}
+.content h1 {
+  font-size: 50px;
+}
+.content h2 {
+  font-size: 40px;
+}
+.content img {
+  max-width: 100%;
 }
 
 .profile {

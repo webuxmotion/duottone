@@ -4,24 +4,22 @@ namespace app\controllers;
 
 use app\models\Lesson;
 
-class LessonsController extends AppController {
+class FunctionalityController extends AppController {
     
     public function indexAction() {
-        $lesson_model = new Lesson();
-        $items = $lesson_model->selectAll();
-    
+        $folder = "/images/functionality";
+
        $this->setMeta(
-           'All lessons'
+           'Site Functionality'
        );
 
-       $this->set(compact('items'));
+       $this->set(compact('folder'));
     }
 
     public function viewAction() {
         $alias = $this->route['alias'];
         $lesson_model = new Lesson();
         $item = $lesson_model->selectByAlias($alias);
-        $lesson_model->setViews($item['id'], $item['views'] + 1);
 
         $content = null;
         

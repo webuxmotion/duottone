@@ -86,6 +86,15 @@ class Lesson extends Model {
         return null;
     }
 
+    public function setViews($id, $value) {
+        $sql = "
+            UPDATE {$this->table}
+            SET views = ?
+            WHERE id = ?
+        ";
+        $this->db->execute($sql, [$value, $id]);
+    }
+
     public function fetchPopular() {
         $sql = "
             SELECT * FROM {$this->table}

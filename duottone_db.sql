@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: duottone-mysql-app:3306
--- Generation Time: Oct 02, 2021 at 10:28 PM
+-- Generation Time: Oct 03, 2021 at 01:46 PM
 -- Server version: 5.7.35
 -- PHP Version: 7.2.2
 
@@ -33,13 +33,6 @@ CREATE TABLE `heart` (
   `userId` int(11) NOT NULL,
   `lessonId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `heart`
---
-
-INSERT INTO `heart` (`id`, `userId`, `lessonId`) VALUES
-(1, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -114,7 +107,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `heart`
 --
 ALTER TABLE `heart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `lesson`
@@ -126,7 +119,7 @@ ALTER TABLE `lesson`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
