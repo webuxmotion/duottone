@@ -61,7 +61,7 @@ class UserController extends AppController {
         }
         $google_login_url = '/user/click-on-google-login-button' . $queryParamsString;
 
-        $this->set(compact('email_value', 'google_login_url'));
+        $this->set(compact('google_login_url'));
     }
 
     public function clickOnGoogleLoginButtonAction() {
