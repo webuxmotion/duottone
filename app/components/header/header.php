@@ -1,5 +1,13 @@
 <?php
   $isIndexPage = $isIndexPage ?? null;
+  $redirectTo = null;
+  $loginQueryParamsString = '';
+  $route = $this->route;
+
+  if ($route['controller'] === 'Lessons' && $route['action'] === 'view') {
+    $redirectTo = '/' . $route['url'];
+    $loginQueryParamsString .= '?redirectTo=' . $redirectTo;
+  }
 ?>
 
 <div class="header section">
@@ -33,7 +41,7 @@
       <?php endif; ?>
       <?php if (!isUser()): ?>
         <?=$this->component('button', [
-          'href' => '/user/login',
+          'href' => '/user/login' . $loginQueryParamsString,
           'title' => 'Войти'
         ])?>
       <?php endif; ?>

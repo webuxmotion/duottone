@@ -6,10 +6,12 @@
 
 @import "../pages/Profile/index.scss";
 @import "../pages/Lessons/index.scss";
+@import "../pages/Lessons/view.scss";
 @import "../pages/Likes/index.scss";
 
 @import "../components/not-found/not-found.scss";
 @import "../components/login/login.scss";
+@import "../components/statistics/statistics.scss";
 @import "../components/faq/faq.scss";
 @import "../components/cards/cards.scss";
 @import "../components/lesson-card/lesson-card.scss";
@@ -18,6 +20,7 @@
 @import "../components/profile/profile.scss";
 @import "../components/input/input.scss";
 @import "../components/google-button/google-button.scss";
+@import "../components/back-button/back-button.scss";
 @import "../components/footer/footer.scss";
 @import "../components/container/container.scss";
 @import "../components/section/section.scss";

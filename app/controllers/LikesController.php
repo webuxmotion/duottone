@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Lesson;
+use app\models\Heart;
 
 class LikesController extends AppController {
     
@@ -15,5 +16,17 @@ class LikesController extends AppController {
        );
 
        $this->set(compact('items'));
+    }
+
+    public function toggleLikeAction() {
+        $lessonId = $_GET['lessonId'] ?? null;
+
+        if ($lessonId) {
+            
+            $heart_model = new Heart();
+            $heart_model->toggleHeart($lessonId);
+        }
+        
+        redirect();
     }
 }

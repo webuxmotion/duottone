@@ -8,9 +8,13 @@
     </div>
     <div class="likes-page__content section">
         <div class="container">
-            <?=$this->component('cards', [
-                'items' => $items
-            ])?>
+            <?php if ($items): ?>
+                <?=$this->component('cards', [
+                    'items' => $items
+                ])?>
+            <?php else: ?>
+                <p class="likes-page__text">У вас еще нет любимых уроков. <a href="lessons">Смотреть все уроки</a></p>
+            <?php endif; ?>
         </div>
     </div>
 </div>

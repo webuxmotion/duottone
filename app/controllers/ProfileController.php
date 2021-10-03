@@ -25,7 +25,7 @@ class ProfileController extends AppController {
             $isUpdated = $user_model->updateProfile($data);
 
             if ($isUpdated) {
-                $_SESSION['success'] = "Profile was updated!";
+                $_SESSION['success'] = "Профиль успешно сохранен!";
             }
         }
         

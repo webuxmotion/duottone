@@ -102,6 +102,31 @@ a:hover {
   padding-bottom: 180px;
 }
 
+.lessons-view-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.lessons-view-page__header {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+.lessons-view-page__content {
+  background-color: #202020;
+  flex-grow: 1;
+}
+.lessons-view-page__header-body {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.lessons-view-page__title {
+  flex-grow: 1;
+}
+.lessons-view-page__back-button {
+  margin-right: 50px;
+}
+
 .likes-page {
   display: flex;
   flex-direction: column;
@@ -117,6 +142,9 @@ a:hover {
   flex-grow: 1;
   padding-top: 80px;
   padding-bottom: 180px;
+}
+.likes-page__text {
+  color: white;
 }
 
 .not-found {
@@ -163,6 +191,29 @@ a:hover {
   max-width: 700px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+}
+.statistics__item {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+.statistics__button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3C88DE;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
+.statistics__text {
+  margin-left: 10px;
 }
 
 .faq {
@@ -229,9 +280,6 @@ a:hover {
 .lesson-card__statistics-icon {
   margin-bottom: 5px;
   height: 30px;
-}
-.lesson-card__statistics-icon.is-active path {
-  fill: #3C88DE;
 }
 
 .popular {
@@ -360,6 +408,18 @@ a:hover {
 .google-button__icon svg {
   width: 30px;
   margin-right: 10px;
+}
+
+.back-button {
+  border: 2px solid #3C88DE;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 3px;
+  box-sizing: border-box;
 }
 
 .footer {

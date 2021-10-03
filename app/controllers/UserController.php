@@ -50,40 +50,28 @@ class UserController extends AppController {
 
     public function loginAction() {
         $this->setMeta(
-            'Registration'
+            'Login to site'
         );
-
         GoogleAuth::run();
-        $google_login_url = GoogleAuth::$google_login_url;
 
-        if (!empty($_POST)) {
-            $data = $_POST;
-            $user_model = new User();
-            $user_model->load($data);
-            
-            if (!$user_model->validate($data)) {
-                $user_model->getErrors();
-                $_SESSION['form_data'] = $data;
-            } else {
-                if ($user_model->login()) {
-                    $_SESSION['success'] = "You are successfully logged in!";
-                } else {
-                    $_SESSION['errors'] = "Email or password is incorrect!";
-                }
-            }
-
-            redirect();
+        $queryParamsString = '';
+        $redirectTo = $_GET['redirectTo'] ?? null;
+        if ($redirectTo) {
+            $queryParamsString .= '?redirectTo=' . $redirectTo;
         }
-
-        $email_value = '';
-
-        if (isset($_SESSION['form_data'])) {
-            $email_value = $_SESSION['form_data']['email'];
-        }
+        $google_login_url = '/user/click-on-google-login-button' . $queryParamsString;
 
         $this->set(compact('email_value', 'google_login_url'));
+    }
 
-        unset($_SESSION['form_data']);
+    public function clickOnGoogleLoginButtonAction() {
+        $redirectTo = $_GET['redirectTo'] ?? null;
+        GoogleAuth::run();
+        $google_login_url = GoogleAuth::$google_login_url;
+        if ($redirectTo) {
+            $_SESSION['redirectTo'] = $redirectTo;
+        }
+        redirect($google_login_url);
     }
 
     public function logoutAction() {

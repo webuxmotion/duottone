@@ -10,12 +10,29 @@ class Lesson extends Model {
 
     public function selectAll() {
         $allItems = $this->fetchAll();
+        
+        if (!$allItems) return null;
 
         $likes = $this->getLikes($allItems);
 
         $resItems = $this->mergeLikesIntoItems($allItems, $likes);
         
         return $resItems;
+    }
+
+    public function selectByAlias($alias) {
+        $sql = "
+            SELECT * FROM {$this->table}
+            WHERE alias = ?
+        ";
+
+        $res = $this->db->query($sql, [$alias]);
+
+        $likes = $this->getLikes($res);
+
+        $resItems = $this->mergeLikesIntoItems($res, $likes);
+
+        return $resItems[0] ?? null;
     }
 
     public function selectPopular() {
@@ -30,6 +47,8 @@ class Lesson extends Model {
 
     public function selectLikedByUser() {
         $items = $this->fetchLikedByUser();
+
+        if (!$items) return null;
 
         $likes = $this->getLikes($items, true);
 
@@ -46,21 +65,25 @@ class Lesson extends Model {
         ";
 
         $heartsRes = $this->db->query($sql, [$userId]);
-        $idsArr = [];
+        if (!empty($heartsRes)) {
+            $idsArr = [];
 
-        foreach ($heartsRes as $item) {
-            array_push($idsArr, $item['lessonId']);
+            foreach ($heartsRes as $item) {
+                array_push($idsArr, $item['lessonId']);
+            }
+    
+            $slots = $this->getSlotsFromArr($idsArr);
+    
+            $sql = "
+                SELECT * FROM {$this->table}
+                WHERE id in ($slots)
+            ";
+            $items = $this->db->query($sql, $idsArr);
+    
+            return $items;
         }
-
-        $slots = $this->getSlotsFromArr($idsArr);
-
-        $sql = "
-            SELECT * FROM {$this->table}
-            WHERE id in ($slots)
-        ";
-        $items = $this->db->query($sql, $idsArr);
-
-        return $items;
+        
+        return null;
     }
 
     public function fetchPopular() {

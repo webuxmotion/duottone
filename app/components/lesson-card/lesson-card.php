@@ -2,6 +2,7 @@
     $alias = $item['alias'];
     $link = "/lessons/$alias";
     $imageUrl = "/images/lessons/" . $item['image'];
+    $heartIcon = $item['likedByUser'] ? icon('heart-filled') : icon('heart');
 ?>
 
 <div class="lesson-card">
@@ -9,8 +10,8 @@
         <div class="lesson-card__inner"></div>
         <div class="lesson-card__statistics">
             <div class="lesson-card__statistics-item">
-                <div class="lesson-card__statistics-icon <?=$item['likedByUser'] ? 'is-active' : ''?>">
-                    <?=icon('heart')?>
+                <div class="lesson-card__statistics-icon">
+                    <?=$heartIcon?>
                 </div>
                 <?=$item['likes']?>
             </div>

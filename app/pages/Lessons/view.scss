@@ -1,0 +1,29 @@
+.lessons-view-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+
+    &__content {
+        background-color: $background-secondary;
+        flex-grow: 1;
+    }
+
+    &__header-body {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    &__title {
+        flex-grow: 1;
+    }
+
+    &__back-button {
+        margin-right: 50px;
+    }
+}

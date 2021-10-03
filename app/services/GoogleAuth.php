@@ -39,8 +39,14 @@ class GoogleAuth {
             } else {
                 $_SESSION['errors'] = "Some trouble with Google Authentication";
             }
-
-            redirect('/user/login');
+            $redirectTo = $_SESSION['redirectTo'] ?? null;
+            unset($_SESSION['redirectTo']);
+            
+            if ($redirectTo) {
+                redirect($redirectTo);
+            } else {
+                redirect('/user/login');
+            }
         }
     }
 }

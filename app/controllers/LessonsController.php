@@ -16,4 +16,12 @@ class LessonsController extends AppController {
 
        $this->set(compact('items'));
     }
+
+    public function viewAction() {
+        $alias = $this->route['alias'];
+        $lesson_model = new Lesson();
+        $item = $lesson_model->selectByAlias($alias);
+
+        $this->set(compact('item'));
+    }
 }
