@@ -17,6 +17,7 @@
         display: flex;
         align-items: center;
         color: white;
+        flex-wrap: wrap;
     }
 
     &__title {
@@ -44,5 +45,9 @@
             max-width: 800px;
             margin-left: 30px;
         }
+    }
+
+    &__statistics {
+        margin-left: auto;
     }
 }

@@ -1,5 +1,6 @@
 @import "./scss/variables.scss";
 @import "./scss/reset.scss";
+@import "./scss/media.scss";
 @import "./scss/mixins.scss";
 
 @import "../layouts/default.scss";
@@ -15,6 +16,7 @@
 @import "../components/statistics/statistics.scss";
 @import "../components/faq/faq.scss";
 @import "../components/cards/cards.scss";
+@import "../components/burger/burger.scss";
 @import "../components/lesson-card/lesson-card.scss";
 @import "../components/popular/popular.scss";
 @import "../components/message/message.scss";

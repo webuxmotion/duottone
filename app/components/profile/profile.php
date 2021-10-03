@@ -4,7 +4,9 @@
     <div class="profile__section">
       <h3 class="profile__title">Основная информация</h3>
       <div class="profile__avatar-group">
-        <div class="profile__image" style="background-image: url(<?=$user['avatar']?>);"></div>
+        <div>
+          <div class="profile__image" style="background-image: url(<?=$user['avatar']?>);"></div>
+        </div>
         <p>Изображение профиля (берется из аккаунта гугл)</p>
       </div>
       <div class="profile__input-columns">

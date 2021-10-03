@@ -14,6 +14,16 @@
         font-size: 80px;
         max-width: 600px;
         margin-bottom: 40px;
+
+        @include media(tablet) {
+            font-size: 50px;
+            max-width: 500px;
+        }
+
+        @include media(mobile) {
+            font-size: 40px;
+            max-width: 400px;
+        }
     }
 
     &__description {

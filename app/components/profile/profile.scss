@@ -38,5 +38,10 @@
   &__input-column {
     width: 500px;
     padding-right: 100px;
+    max-width: 100%;
+
+    @include media(mobile) {
+      padding-right: 0;
+    }
   }
 }

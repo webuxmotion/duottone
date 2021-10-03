@@ -15,7 +15,7 @@
   \*****************************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://starter-kit/./app/components/header/header.js?");
+eval("let burderElements = document.querySelectorAll('.burger');\nlet headerElement = document.querySelector('.header');\n\nif (burderElements.length) {\n    burderElements.forEach((el) => {\n        el.addEventListener('click', () => {\n            headerElement.classList.toggle('is-active');\n        });\n    })\n}\n\n//# sourceURL=webpack://starter-kit/./app/components/header/header.js?");
 
 /***/ }),
 

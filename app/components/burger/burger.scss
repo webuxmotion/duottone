@@ -1,0 +1,22 @@
+.burger {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+
+    &__line {
+        width: 60px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+
+        &:nth-child(1) {
+            transform: translateY(-18px);
+        }
+        
+        &:nth-child(3) {
+            transform: translateY(18px);
+        }
+    }
+}
