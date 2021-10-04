@@ -34,7 +34,9 @@
                         чтобы проскролить страницу в самый низ
                     </p>
                 </div>
-                <?=$content?>
+                <div class="content">
+                    <?=$content?>
+                </div>
                 <div class="lessons-view-page__scroll-top" id="bottom">
                     <?=$this->component('button', [
                         'href' => '#top',
