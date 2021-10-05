@@ -13,7 +13,11 @@
                     'items' => $items
                 ])?>
             <?php else: ?>
-                <p class="likes-page__text">У вас еще нет любимых уроков. <a href="lessons">Смотреть все уроки</a></p>
+              <?php if (isUser()): ?>
+                <p class="likes-page__text">У вас еще нет любимых уроков. <a href="/lessons">Смотреть все уроки</a></p>
+              <?php else: ?>
+                <p class="likes-page__text">Войдите на сайт, чтобы просматривать избранные уроки. <a href="/user/login">Войти на сайт</a></p>
+              <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>

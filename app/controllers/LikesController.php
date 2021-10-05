@@ -8,8 +8,12 @@ use app\models\Heart;
 class LikesController extends AppController {
     
     public function indexAction() {
+      $items = null;
+
+      if (isUser()) {
         $lesson_model = new Lesson();
         $items = $lesson_model->selectLikedByUser();
+      }
     
        $this->setMeta(
            'All lessons'
