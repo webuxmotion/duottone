@@ -13,8 +13,8 @@ class MainController extends AppController {
     
        $this->setMeta(
            Tone::$app->getProperty('site_name'),
-           'Modure Store',
-           'Modure Store'
+           'Duottone Music Academy',
+           'music, piano, duottone, piano lessons'
        );
 
        $this->set(compact('popular'));

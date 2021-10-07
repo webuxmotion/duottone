@@ -10,6 +10,10 @@
   border: none;
   display: inline-block;
 
+  @include media(mobile) {
+    padding: 15px;
+  }
+
   &:hover {
     background-color: lighten($primary-color, 10%);
   }

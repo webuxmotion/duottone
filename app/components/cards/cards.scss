@@ -9,5 +9,10 @@
     padding-bottom: 50px;
     width: 300px;
     max-width: 100%;
+
+    @include media(mobile) {
+      width: 100%;
+      padding-right: 0;
+    }
   }
 }

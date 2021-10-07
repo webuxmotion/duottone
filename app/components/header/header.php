@@ -30,9 +30,19 @@
             <li class="header__nav-item <?=$alias === 'lessons' ? 'is-active' : ''?>">
               <a href="/lessons">Все уроки</a>
             </li>
+            <li class="header__nav-item <?=$alias === 'likes' ? 'is-active' : ''?>">
+              <a href="/likes"><span><?=icon('heart')?></span>Избранное</a>
+            </li>
             <?php if (isUser()): ?>
-              <li class="header__nav-item <?=$alias === 'likes' ? 'is-active' : ''?>">
-                <a href="/likes"><span><?=icon('heart')?></span>Избранное</a>
+              <li class="header__nav-item is-hide-on-desktop <?=$alias === 'profile' ? 'is-active' : ''?>">
+                <a href="/profile"><span>Профиль</a>
+              </li>
+              <li class="header__nav-item is-hide-on-desktop">
+                <a href="/user/logout"><span>Выход</a>
+              </li>
+            <?php else: ?>
+              <li class="header__nav-item is-hide-on-desktop <?=$alias === '/user/login' ? 'is-active' : ''?>">
+                <a href="/user/login"><span>Войти</a>
               </li>
             <?php endif; ?>
           </ul>

@@ -3,15 +3,18 @@
 namespace app\controllers;
 
 use app\models\Lesson;
+use core\Tone;
 
 class FunctionalityController extends AppController {
     
     public function indexAction() {
         $folder = "/images/functionality";
 
-       $this->setMeta(
-           'Site Functionality'
-       );
+        $this->setMeta(
+            'Функционал сайта - ' . Tone::$app->getProperty('site_name'),
+            'Страница с описанием функционала сайта. Duottone Music Academy',
+            'music, piano, duottone, piano lessons'
+        );
 
        $this->set(compact('folder'));
     }

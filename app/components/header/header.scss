@@ -104,6 +104,14 @@
       }
     }
 
+    &.is-hide-on-desktop {
+      display: none;
+
+      @include media(tablet) {
+        display: flex;
+      }
+    }
+
     svg {
       display: block;
       margin-right: 10px;
@@ -145,6 +153,10 @@
     svg {
       width: 120px;
       display: block;
+
+      @include media(mobile) {
+        width: 90px;
+      }
     }
   }
 
@@ -158,7 +170,7 @@
 
     @include media(mobile) {
       padding-right: 0;
-      margin-left: 30px;
+      margin-left: 10px;
     }
   }
 }

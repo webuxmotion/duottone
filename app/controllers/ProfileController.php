@@ -10,9 +10,11 @@ class ProfileController extends AppController {
     public function indexAction() {
         $user = $_SESSION['user'] ?? null;
     
-       $this->setMeta(
-           'Profile Page'
-       );
+        $this->setMeta(
+            'Профиль - ' . Tone::$app->getProperty('site_name'),
+            'Страница с профидем пользователя. Duottone Music Academy',
+            'music, piano, duottone, piano lessons, user profile'
+        );
 
        $this->set(compact('user'));
     }

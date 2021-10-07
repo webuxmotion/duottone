@@ -13,13 +13,18 @@
                 <div class="lesson-card__statistics-icon">
                     <?=$heartIcon?>
                 </div>
-                <?=$item['likes']?>
+                <div class="lesson-card__statistics-number">
+                    <?=$item['likes']?>
+                </div>
+                
             </div>
             <div class="lesson-card__statistics-item">
                 <div class="lesson-card__statistics-icon">
                     <?=icon('eye')?>
                 </div>
-                <?=$item['views']?>
+                <div class="lesson-card__statistics-number">
+                    <?=$item['views']?>
+                </div>
             </div>
         </div>
     </a>

@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\User;
 use app\services\GoogleAuth;
+use core\Tone;
 
 class UserController extends AppController {
     
@@ -50,8 +51,11 @@ class UserController extends AppController {
 
     public function loginAction() {
         $this->setMeta(
-            'Login to site'
+            'Вход на сайт - ' . Tone::$app->getProperty('site_name'),
+            'Страница авторизации. Duottone Music Academy',
+            'music, piano, duottone, piano lessons'
         );
+
         GoogleAuth::run();
 
         $queryParamsString = '';

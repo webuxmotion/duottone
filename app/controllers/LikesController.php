@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Lesson;
 use app\models\Heart;
+use core\Tone;
 
 class LikesController extends AppController {
     
@@ -15,9 +16,11 @@ class LikesController extends AppController {
         $items = $lesson_model->selectLikedByUser();
       }
     
-       $this->setMeta(
-           'All lessons'
-       );
+      $this->setMeta(
+        'Избранные уроки - ' . Tone::$app->getProperty('site_name'),
+        'Страница с избранными уроками. Duottone Music Academy',
+        'music, piano, duottone, piano lessons'
+        );
 
        $this->set(compact('items'));
     }

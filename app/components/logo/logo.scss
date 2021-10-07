@@ -11,5 +11,11 @@
   svg {
     width: 150px;
     height: auto;
+
+    @include media(mobile) {
+      width: 100px;
+    }
   }
+
+
 }

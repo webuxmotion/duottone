@@ -24,7 +24,7 @@
     &__statistics {
         text-decoration: none;
         position: absolute;
-        top: 20px;
+        bottom: 14px;
         right: 20px;
         color: white;
         display: flex;
@@ -32,13 +32,17 @@
 
     &__statistics-item {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         padding-left: 20px;
     }
 
     &__statistics-icon {
-        margin-bottom: 5px;
         height: 30px;
+    }
+
+    &__statistics-number {
+        margin-left: 7px;
+        font-weight: bold;
+        margin-top: 2px;
     }
 }

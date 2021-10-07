@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Lesson;
+use core\Tone;
 
 class LessonsController extends AppController {
     
@@ -10,9 +11,11 @@ class LessonsController extends AppController {
         $lesson_model = new Lesson();
         $items = $lesson_model->selectAll();
     
-       $this->setMeta(
-           'All lessons'
-       );
+        $this->setMeta(
+            'Все уроки - ' . Tone::$app->getProperty('site_name'),
+            'Страница с уроками. Duottone Music Academy',
+            'music, piano, duottone, piano lessons'
+        );
 
        $this->set(compact('items'));
     }
@@ -34,6 +37,12 @@ class LessonsController extends AppController {
                 'folder' => '/content/' . $alias
             ]);
         }
+
+        $this->setMeta(
+            ($item['title'] ? $item['title'] . ' - ' : '') . Tone::$app->getProperty('site_name'),
+            'Страница урока. Duottone Music Academy',
+            'music, piano, duottone, piano lessons, lesson'
+        );
 
         $this->set(compact('item', 'content'));
     }
