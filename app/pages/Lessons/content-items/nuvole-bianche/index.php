@@ -3,5 +3,6 @@
 <p>Ссылка на MIDI - <a href="https://bitmidi.com/ludovico-einaudi-nuvole-bianche-mid">https://bitmidi.com/ludovico-einaudi-nuvole-bianche-mid</a></p>
 
 <p>Фрагмент песни</p>
-<img src="<?=$folder?>/scheme.png" style="width: 100%;" />
+<img src="<?=$folder?>/step-35-40.svg" style="width: 100%;" />
+<img src="<?=$folder?>/step-29-34.svg" style="width: 100%;" />
 
