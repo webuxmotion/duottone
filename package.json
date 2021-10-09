@@ -24,6 +24,7 @@
     "webpack-cli": "^4.4.0"
   },
   "dependencies": {
+    "pdf-lib": "^1.16.0",
     "sass": "^1.32.5"
   }
 }
