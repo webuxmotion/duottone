@@ -1889,10 +1889,10 @@
 <rect x="369" y="164" width="11" height="5" fill="black"/>
 <rect x="453" y="164" width="11" height="5" fill="black"/>
 <rect x="453" y="132" width="11" height="5" fill="black"/>
-<rect x="513" y="132" width="11" height="5" fill="black"/>
+<rect x="537" y="132" width="11" height="5" fill="black"/>
 <circle cx="428.5" cy="166.5" r="4.5" fill="black"/>
 <circle cx="452.5" cy="145.5" r="4.5" fill="black"/>
-<circle cx="512.5" cy="145.5" r="4.5" fill="black"/>
+<circle cx="536.5" cy="145.5" r="4.5" fill="black"/>
 <rect x="369" y="307" width="11" height="5" fill="black"/>
 <rect x="453" y="307" width="11" height="5" fill="black"/>
 <circle cx="404.5" cy="309.5" r="4.5" fill="black"/>
