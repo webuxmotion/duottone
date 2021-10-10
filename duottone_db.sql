@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: duottone-mysql-app:3306
--- Generation Time: Oct 04, 2021 at 06:56 PM
+-- Generation Time: Oct 10, 2021 at 10:06 AM
 -- Server version: 5.7.35
 -- PHP Version: 7.2.2
 
@@ -55,7 +55,8 @@ CREATE TABLE `lesson` (
 INSERT INTO `lesson` (`id`, `alias`, `views`, `image`, `title`) VALUES
 (1, 'boogie-woogie', 18, 'boogie-woogie.png', 'Boogie woogie'),
 (2, 'dobro-unost', 27, 'dobro-unost.png', 'Dobro - Unost'),
-(3, 'nuvole-bianche', 24, 'nuvole-bianche.png', 'Ludovico Einaudi - Nuvole Bianche');
+(3, 'nuvole-bianche', 29, 'nuvole-bianche.png', 'Ludovico Einaudi - Nuvole Bianche'),
+(4, 'robert-b-weide', 7, 'robert-b-weide.jpg', 'Directed by ROBERT B. WEIDE');
 
 -- --------------------------------------------------------
 
@@ -108,19 +109,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `heart`
 --
 ALTER TABLE `heart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `lesson`
 --
 ALTER TABLE `lesson`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

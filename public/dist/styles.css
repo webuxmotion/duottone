@@ -324,8 +324,9 @@ a:hover {
   border: 1px solid #3C88DE;
   position: relative;
   display: block;
-  background-size: 101%;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .lesson-card__box:hover {
   border-color: white;
