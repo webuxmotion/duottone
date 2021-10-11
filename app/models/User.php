@@ -3,6 +3,7 @@
 namespace app\models;
 
 use core\base\Model;
+use app\services\Mailer;
 
 class User extends Model {
 
@@ -83,6 +84,10 @@ class User extends Model {
             }
             $res = $this->findOne($email, 'email');
             $this->setSessionUser($res[0]);
+
+            $mailer = new Mailer();
+            $mailer->loadView('mail/admin/new-customer', ['email' => $email]);
+            $mailer->send('New friend is here!', 'DUOTTONE', $_ENV['COMPANY_EMAIL']);
         } else {
             $sql = "
                 UPDATE user
