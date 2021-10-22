@@ -15,3 +15,12 @@ Router::add(
     ['controller' => 'Functionality', 'action' => 'index']
 );
 
+Router::add(
+    '^admin$',
+    ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']
+);
+
+Router::add(
+    '^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$',
+    ['prefix' => 'admin']
+);
