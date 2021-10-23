@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: duottone-mysql-app:3306
--- Generation Time: Oct 10, 2021 at 10:06 AM
--- Server version: 5.7.35
+-- Generation Time: Oct 23, 2021 at 03:15 PM
+-- Server version: 5.7.36
 -- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -56,7 +56,8 @@ INSERT INTO `lesson` (`id`, `alias`, `views`, `image`, `title`) VALUES
 (1, 'boogie-woogie', 18, 'boogie-woogie.png', 'Boogie woogie'),
 (2, 'dobro-unost', 27, 'dobro-unost.png', 'Dobro - Unost'),
 (3, 'nuvole-bianche', 29, 'nuvole-bianche.png', 'Ludovico Einaudi - Nuvole Bianche'),
-(4, 'robert-b-weide', 7, 'robert-b-weide.jpg', 'Directed by ROBERT B. WEIDE');
+(4, 'robert-b-weide', 7, 'robert-b-weide.jpg', 'Directed by ROBERT B. WEIDE'),
+(5, 'jazz-improvisation', 10, 'jazz-improvisation.svg', 'Jazz Improvisation by NewJazz');
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,7 @@ ALTER TABLE `heart`
 -- AUTO_INCREMENT for table `lesson`
 --
 ALTER TABLE `lesson`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
