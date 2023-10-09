@@ -2,7 +2,7 @@
     <div class="likes-page__header section">
         <div class="container">
             <div class="likes-page__title-group">
-                <h2 class="likes-page__title">Избранные уроки</h2>
+                <h2 class="likes-page__title">Уроки, які сподобалися</h2>
             </div>
         </div>
     </div>
@@ -14,9 +14,9 @@
                 ])?>
             <?php else: ?>
               <?php if (isUser()): ?>
-                <p class="likes-page__text">У вас еще нет любимых уроков. <a href="/lessons">Смотреть все уроки</a></p>
+                <p class="likes-page__text">Ви ще не вподобали жодного уроку. <a href="/lessons">Дивитися всі уроки</a></p>
               <?php else: ?>
-                <p class="likes-page__text">Войдите на сайт, чтобы просматривать избранные уроки. <a href="/user/login">Войти на сайт</a></p>
+                <p class="likes-page__text">Увійдіть на сайт, щоб переглянути уроки, які вам сподобалися. <a href="/user/login">Увійти на сайт</a></p>
               <?php endif; ?>
             <?php endif; ?>
         </div>

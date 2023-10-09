@@ -51,8 +51,8 @@ class UserController extends AppController {
 
     public function loginAction() {
         $this->setMeta(
-            'Вход на сайт - ' . Tone::$app->getProperty('site_name'),
-            'Страница авторизации. Duottone Music Academy',
+            'Вхід на сайт - ' . Tone::$app->getProperty('site_name'),
+            'Сторінка авторизації. Duottone Music Academy',
             'music, piano, duottone, piano lessons'
         );
 

@@ -17,8 +17,8 @@ class LikesController extends AppController {
       }
     
       $this->setMeta(
-        'Избранные уроки - ' . Tone::$app->getProperty('site_name'),
-        'Страница с избранными уроками. Duottone Music Academy',
+        'Вибрані уроки - ' . Tone::$app->getProperty('site_name'),
+        'Сторінка з вибраними уроками. Duottone Music Academy',
         'music, piano, duottone, piano lessons'
         );
 

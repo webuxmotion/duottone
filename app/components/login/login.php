@@ -2,12 +2,12 @@
   <?php if (isUser()): ?>
     <?=$this->component('button', [
       'href' => '/',
-      'title' => 'На главную',
+      'title' => 'На головну',
     ])?>
   <?php else: ?>
-    <h2 class="login__title">Вход на сайт</h2>
-    <p class="login__description">Авторизуйтесь с помощью Google, чтобы иметь возможность 
-    добавлять понравившиеся уроки в “Избранное”</p>
+    <h2 class="login__title">Вхід на сайт</h2>
+    <p class="login__description">Авторизуйтесь за допомогою Google, щоб мати можливість
+     додавати уроки, що сподобалися, в “Вибране”</p>
     <?=$this->component('google-button', [
       'href' => $href
     ])?>

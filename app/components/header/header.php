@@ -28,21 +28,21 @@
           </div>
           <ul class="header__nav-list">
             <li class="header__nav-item <?=$alias === 'lessons' ? 'is-active' : ''?>">
-              <a href="/lessons">Все уроки</a>
+              <a href="/lessons">Всі уроки</a>
             </li>
             <li class="header__nav-item <?=$alias === 'likes' ? 'is-active' : ''?>">
-              <a href="/likes"><span><?=icon('heart')?></span>Избранное</a>
+              <a href="/likes"><span><?=icon('heart')?></span>Сподобалось</a>
             </li>
             <?php if (isUser()): ?>
               <li class="header__nav-item is-hide-on-desktop <?=$alias === 'profile' ? 'is-active' : ''?>">
-                <a href="/profile"><span>Профиль</a>
+                <a href="/profile"><span>Профіль</a>
               </li>
               <li class="header__nav-item is-hide-on-desktop">
-                <a href="/user/logout"><span>Выход</a>
+                <a href="/user/logout"><span>Вихід</a>
               </li>
             <?php else: ?>
               <li class="header__nav-item is-hide-on-desktop <?=$alias === '/user/login' ? 'is-active' : ''?>">
-                <a href="/user/login"><span>Войти</a>
+                <a href="/user/login"><span>Увійти</a>
               </li>
             <?php endif; ?>
           </ul>
@@ -52,7 +52,7 @@
         <?php if (isUser()): ?>
           <?=$this->component('button', [
             'href' => '/profile',
-            'title' => 'Профиль',
+            'title' => 'Профіль',
             'type' => 'outlined',
             'active' => $alias === 'profile'
           ])?>
@@ -60,7 +60,7 @@
         <?php if (!isUser()): ?>
           <?=$this->component('button', [
             'href' => '/user/login' . $loginQueryParamsString,
-            'title' => 'Войти'
+            'title' => 'Увійти'
           ])?>
         <?php endif; ?>
       </div>

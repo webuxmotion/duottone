@@ -11,11 +11,6 @@ Router::add(
 );
 
 Router::add(
-    '^site-functionality$', 
-    ['controller' => 'Functionality', 'action' => 'index']
-);
-
-Router::add(
     '^admin$',
     ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']
 );

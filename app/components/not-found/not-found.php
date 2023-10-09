@@ -2,19 +2,19 @@
   <div class="container">
     <div class="not-found__body">
       <span class="not-found__number">404</span>
-      <p class="not-found__message">Страница не найдена</p>
+      <p class="not-found__message">Сторінку не знайдено</p>
       <div class="not-found__button">
         <?=$this->component('button', [
           'href' => '/',
-          'title' => 'На главную',
+          'title' => 'На головну сторінку',
         ])?>
       </div>
     </div>
     <p class="not-found__info is-first">
-      Наша миссия: Делать музыку ближе к людям
+      Наша місія: Робити музику ближче до людей
     </p>
     <p class="not-found__info is-second">
-      Наш слоган: Играй стразу, учись потом
+      Наш слоган: Грай відразу, вчись граючи
     </p>
   </div>
 </div>

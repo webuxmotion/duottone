@@ -2,12 +2,12 @@
   <form method="POST" action="/profile/update">
     <!-- START. profile__section -->
     <div class="profile__section">
-      <h3 class="profile__title">Основная информация</h3>
+      <h3 class="profile__title">Основна інформація</h3>
       <div class="profile__avatar-group">
         <div>
           <div class="profile__image" style="background-image: url(<?=$user['avatar']?>);"></div>
         </div>
-        <p>Изображение профиля (берется из аккаунта гугл)</p>
+        <p>Зображення профілю (береться з облікового запису гугл)</p>
       </div>
       <div class="profile__input-columns">
         <div class="profile__input-column">
@@ -53,7 +53,7 @@
     <!-- END. profile__section -->
     <!-- START. profile__section -->
     <div class="profile__section">
-      <h3 class="profile__title">Дополнительная информация</h3>
+      <h3 class="profile__title">Додаткова інформація</h3>
       <div class="profile__input-columns">
         <div class="profile__input-column">
           <div class="profile__input-wrapper">
@@ -79,7 +79,7 @@
     </div>
     <!-- END. profile__section -->
     <?=$this->component('button', [
-      'title' => 'Сохранить',
+      'title' => 'Зберегти',
     ])?>
   </form>
 </div>
