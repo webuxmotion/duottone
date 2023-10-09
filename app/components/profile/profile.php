@@ -13,7 +13,7 @@
         <div class="profile__input-column">
           <div class="profile__input-wrapper">
             <?=$this->component('input', [
-              'title' => 'Имя',
+              'title' => 'Им\'я',
               'name' => 'firstName',
               'id' => 'firstName',
               'value' => $user['firstName'],
@@ -21,7 +21,7 @@
           </div>
           <div class="profile__input-wrapper">
             <?=$this->component('input', [
-              'title' => 'Фамилия',
+              'title' => 'Прізвище',
               'name' => 'lastName',
               'id' => 'lastName',
               'value' => $user['lastName'],

@@ -11,8 +11,8 @@ class ProfileController extends AppController {
         $user = $_SESSION['user'] ?? null;
     
         $this->setMeta(
-            'Профиль - ' . Tone::$app->getProperty('site_name'),
-            'Страница с профидем пользователя. Duottone Music Academy',
+            'Профіль - ' . Tone::$app->getProperty('site_name'),
+            'Сторінка із профілем користувача. Duottone Music Academy',
             'music, piano, duottone, piano lessons, user profile'
         );
 
@@ -27,7 +27,7 @@ class ProfileController extends AppController {
             $isUpdated = $user_model->updateProfile($data);
 
             if ($isUpdated) {
-                $_SESSION['success'] = "Профиль успешно сохранен!";
+                $_SESSION['success'] = "Профіль успішно збережено";
             }
         }
         

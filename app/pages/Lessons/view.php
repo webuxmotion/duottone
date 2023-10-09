@@ -27,7 +27,7 @@
                 <div class="lessons-view-page__scroll-bottom">
                     <?=$this->component('button', [
                         'href' => '#bottom',
-                        'title' => 'Начать'
+                        'title' => 'Почати'
                     ])?>
                     <p>
                     Наші схеми читаються знизу нагору, натисніть “Почати”,
@@ -40,7 +40,7 @@
                 <div class="lessons-view-page__scroll-top" id="bottom">
                     <?=$this->component('button', [
                         'href' => '#top',
-                        'title' => 'Наверх'
+                        'title' => 'Нагору'
                     ])?>
                 </div>
             <?php else: ?>
